@@ -1,3 +1,14 @@
+.fade-in, .slide-up {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 body {
     font-family: "Montserrat", sans-serif;   
     margin: 0;
@@ -43,7 +54,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #9000ff;
+    color: #b3a7bc;
     font-size: 1.25rem;
     text-decoration: underline;
 }
@@ -63,7 +74,7 @@ nav ul li a:hover {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5); /* Opacity effect */
+    background-color: rgba(0, 0, 0, 0.5); 
 }
 
 .home-content {
@@ -84,15 +95,17 @@ nav ul li a:hover {
 /* About Section */
 .about-section {
     padding: 50px;
-    background-color: #f0f0f5;
+    background-color: rgb(206, 204, 219);
     display: flex;
-    flex-direction: row;  /* Ensure content is side by side */
+    flex-direction: row;  
     align-items: center;
     justify-content: space-between;
     margin: 0 auto;
 }
 
-
+.colour{
+    color: #0b0a0b;
+}
 .about-info {
     flex: 1;
     margin-right: 30px;
@@ -110,7 +123,7 @@ nav ul li a:hover {
 }
 
 .about-photo {
-    flex: 0.4;  /* Give the image less width compared to the text */
+    flex: 0.4;  
 }
 
 .about-photo img {
@@ -119,32 +132,60 @@ nav ul li a:hover {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Responsive Design for smaller screens */
-@media (max-width: 768px) {
-    .about-container {
-        flex-direction: column; /* Stack the items vertically on small screens */
-        text-align: center;
-    }
-    
-    .about-info {
-        margin-right: 0;
-        margin-bottom: 20px;
-    }
+/* Education section */
 
-    .about-photo img {
-        max-width: 250px;  /* Restrict image size on smaller screens */
-    }
+.education-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--background-color);
 }
 
-/* .hobbies-skills {
-    text-align: center;
-    font-size: 1.2rem;
-} */
+.education-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    margin: 15px 0;
+    width: 80%;
+}
+
+.education-logo {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.education-logo img {
+    max-width: 100px;
+    max-height: 100px;
+}
+
+.education-data {
+    flex: 3;
+    padding-left: 20px;
+}
+
+.education-data h2 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+.education-data p {
+    font-size: 1rem;
+    color: var(--secondary-text-color);
+}
+
 
 /* Projects Section */
 .projects-section {
     padding: 50px 20px;
-    background-color: #3c3c44;
+    background-color: #5f5f6c;
     text-align: center;
 }
 .projects-section h2{
@@ -166,7 +207,7 @@ nav ul li a:hover {
 }
 
 .project-box:hover {
-    background-color: #97929b;
+    background-color: #494953;
     color: white;
     transform: translateY(-10px);
 }
@@ -176,7 +217,7 @@ nav ul li a:hover {
     padding: 50px;
     display: flex;
     justify-content: space-between;
-    background-color: #8c8080;
+    background-color: rgb(88, 87, 100);
     color: white;
 }
 
@@ -207,11 +248,14 @@ nav ul li a:hover {
 
 .contact-right button {
     padding: 10px 20px;
-    background-color:#9000ff;
+    background-color:  rgb(216, 221, 239);
     border: none;
-    color: white;
+    color: black;
     cursor: pointer;
     border-radius: 5px;
+}
+.contact-right button:hover{
+    background-color:  rgb(189, 193, 209);
 }
 
 footer {
@@ -224,4 +268,77 @@ footer {
 /* Smooth scrolling */
 html {
     scroll-behavior: smooth;
+}
+
+
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        height: fit-content;
+    }
+
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+    .home-content h2 {
+        font-size: 2rem;
+    }
+
+    .home-content p {
+        font-size: 1rem;
+    }
+
+    .about-section {
+        flex-direction: column;
+    }
+
+    .about-info {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .about-photo img {
+        width: 100%;
+        max-width: 300px;
+    }
+    .education-box {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .education-logo img {
+        margin-bottom: 10px;
+    }
+
+    .project-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-box {
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    .contact-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-left,
+    .contact-right {
+        width: 100%;
+        text-align: center;
+    }
+
+    .contact-left img {
+        width: 40px;
+        margin: 10px;
+    }
 }
