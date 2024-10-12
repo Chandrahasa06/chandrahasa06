@@ -6,15 +6,19 @@
     <title>Chandrahasa Rachakonda Portfolio</title>
     <link rel="stylesheet" href="port.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
 </head>
 <body>
     <header>
         <nav>
-            <div class="left">Hasa's portfolio</div>
+            <div class="left">Chandrahasa</div>
             <div class="right">
                 <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About Me</a></li>
+                    <li><a href="#education">Education</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#contact">Contact Me</a></li>
                 </ul>
@@ -22,7 +26,7 @@
         </nav>
     </header>
 
-    <section id="home" class="home-section">
+    <section id="home" class="home-section fade-in" >
         <div class="home-content">
             <h2>Welcome to My Portfolio</h2>
             <p>Hi, I'm Chandrahasa Rachakonda</p>
@@ -30,18 +34,56 @@
     </section>
 
     <section id="about" class="about-section">
-        <div class="about-info">
+        <div class="about-info fade-in">
             <h2>About Me</h2>
-            <p>My name is Chandrahasa, I'm a second-year B.Tech student majoring in Computer Science and Engineering. I have a deep passion for technology, coding, and problem-solving, with a particular interest in web development and database management systems.Beyond academics, I've been actively involved in cultural activities. This blend of creativity and technical skills drives me to explore innovative solutions in both my projects and personal interests.I believe in constant learning and pushing the boundaries of my abilities.</p>
+            <p>My name is <span class="colour"><b>Chandrahasa</b></span>, I'm a second-year B.Tech student majoring in Computer Science and Engineering in <b>Indian institute of Technology Indore</b>. I have a deep passion for technology, coding, and problem-solving.Beyond academics, I've been actively involved in cultural activities. This blend of creativity and technical skills drives me to explore innovative solutions in both my projects and personal interests.I believe in constant learning and pushing the boundaries of my abilities.</p>
             <p><b>Skills:</b> Programming, Web Development, DBMS</p>
             <p><b>Hobbies:</b> Dancing, Sketching, Reading novels</p>
         </div>
-        <div class="about-photo">
+        <div class="about-photo fade-in">
             <img src="my-photo2.jpg" alt="Chandrahasa">
         </div>
     </section>
+    <section id="education" class="education-container">
+        <h2>Education</h2>
+    
+        <div class="education-box fade-in">
+            <div class="education-logo">
+                <img src="school-logo.jpg" alt="Srinidhi High School Logo">
+            </div>
+            <div class="education-data">
+                <h2>Srinidhi High School</h2>
+                <p>6th - 10th Grade</p>
+                <p>2016-2021</p>
+            </div>
+        </div>
 
-    <section id="projects" class="projects-section">
+        <div class="education-box dae-in">
+            <div class="education-logo">
+                <img src="college-logo.webp" alt="Sri Chaitanya Junior College Logo">
+            </div>
+            <div class="education-data">
+                <h2>Sri Chaitanya Junior College</h2>
+                <p>11th - 12th Grade</p>
+                <p>2021-2023</p>
+                <p>Secured 98.80%</p>
+            </div>
+        </div>
+    
+        <div class="education-box fade-in">
+            <div class="education-logo">
+                <img src="iit-logo.webp" alt="IIT Indore Logo">
+            </div>
+            <div class="education-data">
+                <h2>IIT Indore</h2>
+                <p>B.Tech in Computer Science Engineering</p>
+                <p> 2023 - 2027</p>
+                <p>Pursuing</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects-section fade-in">
         <h2>Projects</h2>
         <div class="project-container">
             <div class="project-box">
@@ -55,7 +97,7 @@
         </div>
     </section>
 
-    <section id="contact" class="contact-section">
+    <section id="contact" class="contact-section fade-in">
         <div class="contact-left">
             <h2>Contact Me</h2>
             <p>Email: cse230001065@iiti.ac.in</p>
@@ -79,6 +121,6 @@
         <p>Copyright © Rachakonda Chandrahasa. All rights reserved.</p>
     </footer>
 
-    <script src="app.js"></script>
+    <script src="port.js"></script>
 </body>
 </html>
